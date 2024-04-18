@@ -375,6 +375,10 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <compilerId>groovy-eclipse-compiler</compilerId>
+                    <compilerArgs>
+                        <arg>--add-exports</arg>
+                        <arg>java.desktop/sun.awt.image=ALL-UNNAMED</arg>
+                    </compilerArgs>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -396,6 +400,7 @@
                 <configuration>
                     <forkMode>once</forkMode>
                     <argLine>@{argLine} -Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=1024m</argLine>
+                    <argLine>@{argLine} --add-exports java.desktop/sun.awt.image=ALL-UNNAMED</argLine>
                     <systemPropertyVariables>
                         <org.geotools.referencing.forceXY>true</org.geotools.referencing.forceXY>
                     </systemPropertyVariables>

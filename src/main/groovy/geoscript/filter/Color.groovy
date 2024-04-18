@@ -345,7 +345,7 @@ class Color extends Expression {
             int r = color[0].toInteger()
             int g = color[1].toInteger()
             int b =  color[2].toInteger()
-            int a = color.size > 3 ? color[3].toInteger() : 0
+            int a = color.size() > 3 ? color[3].toInteger() : 0
             return new java.awt.Color(r, g, b, a)
         }
         // RGB as Map [r:255,g:255,b:0,a:125]
